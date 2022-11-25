@@ -55,25 +55,49 @@ public class Main {
             returnValue = -1;
         } else{
             checkLeapYear = isLeapYear(year);
+            //System.out.println("checkLeapYear = " + checkLeapYear);
             switch (month){
                 case 1:
+                    returnValue = 31;
+                    break;
                 case 2:
-                    if(checkLeapYear ==true){
-
+                    if(checkLeapYear == true){
+                        returnValue = 29;
+                    } else if(checkLeapYear == false){
+                        returnValue = 28;
                     }
+                    break;
                 case 3:
+                    returnValue = 31;
+                    break;
                 case 4:
+                    returnValue = 30;
+                    break;
                 case 5:
+                    returnValue = 31;
+                    break;
                 case 6:
+                    returnValue = 30;
+                    break;
                 case 7:
+                    returnValue = 31;
+                    break;
                 case 8:
+                    returnValue = 31;
+                    break;
                 case 9:
+                    returnValue = 30;
+                    break;
                 case 10:
+                    returnValue = 31;
+                    break;
                 case 11:
+                    returnValue = 30;
+                    break;
                 case 12:
+                    returnValue = 31;
+                    break;
             }
-
-            returnValue = 1;
         }
 
         return returnValue;
